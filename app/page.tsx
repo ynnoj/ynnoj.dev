@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import Link from 'next/link'
+import type { AnchorHTMLAttributes, ComponentType, ReactElement } from 'react'
 
 import { Container } from '@/components/container'
 import {
@@ -11,18 +11,17 @@ import {
 function SocialLink({
   icon: Icon,
   ...props
-}: {
-  href: string
-  icon: React.FC<{ className: string }>
-}) {
+}: AnchorHTMLAttributes<HTMLAnchorElement> & {
+  icon: ComponentType<{ className: string }>
+}): ReactElement {
   return (
-    <Link className="group -m-1 p-1" {...props}>
+    <a className="group -m-1 p-1" {...props}>
       <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-    </Link>
+    </a>
   )
 }
 
-export default function Home(): JSX.Element {
+export default function Home(): ReactElement {
   return (
     <Fragment>
       <Container className="mt-9">

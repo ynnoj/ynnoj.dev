@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
   ],
-  plugins: [require('@tailwindcss/typography')],
   theme: {
     fontFamily: {
       sans: ['var(--font-inter)'],
@@ -26,5 +24,4 @@ module.exports = {
       '9xl': ['8rem', { lineHeight: '1' }],
     },
   },
-  plugins: [require('@tailwindcss/typography')],
 }

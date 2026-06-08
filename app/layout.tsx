@@ -1,17 +1,18 @@
 import './globals.css'
 
 import { Analytics } from '@vercel/analytics/react'
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import type { ReactElement, ReactNode } from 'react'
 
 import Header from '@/components/header'
-import Footer from '@/components/footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
-    template: ' % | Jonathan Steele',
+    template: '%s | Jonathan Steele',
     default: 'Jonathan Steele',
   },
-  description: 'Software developer & developer advodate',
+  description: 'Software developer and developer advocate',
 }
 
 const inter = Inter({
@@ -23,8 +24,8 @@ const inter = Inter({
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
-}): JSX.Element {
+  children: ReactNode
+}): ReactElement {
   return (
     <html lang="en" className={`h-full antialiased ${inter.variable}`}>
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">

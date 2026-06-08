@@ -1,6 +1,8 @@
+import type { ReactElement } from 'react'
+
 import { Container } from '@/components/container'
 
-export default function Footer(): JSX.Element {
+export default function Footer(): ReactElement {
   return (
     <footer className="mt-32">
       <Container.Outer>
